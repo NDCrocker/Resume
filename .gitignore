@@ -1,0 +1,7 @@
+# File Types to be ignored and not required for upload
+*.xmpi
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.gz 

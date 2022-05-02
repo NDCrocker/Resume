@@ -1,37 +1,114 @@
-\documentclass[10pt, ragged2e, withhyper]{altacv}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
 \geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
 
 \usepackage{paracol}
-
+\usepackage{bookmark}
+\usepackage{hyperref}
 \usepackage[rm]{roboto}
 \usepackage[defaultsans]{lato}
 % \usepackage{sourcesanspro}
 \renewcommand{\familydefault}{\sfdefault}
 
-\begin{document}
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
 
-\name{Nicolas Crocker} 
+
+% Deal with font sizes here 
+
+
+% Customizing Colour for the Document 
+% \definecolor{SlateGrey}{HTML}{2E2E2E}
+% \definecolor{LightGrey}{HTML}{666666}
+% \definecolor{DarkPastelRed}{HTML}{450808}
+% \definecolor{PastelRed}{HTML}{8F0D0D}
+% \definecolor{GoldenEarth}{HTML}{E7D192}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+% \colorlet{heading}{DarkPastelRed}
+% \colorlet{headingrule}{GoldenEarth}
+% \colorlet{subheading}{PastelRed}
+% \colorlet{accent}{PastelRed}
+% \colorlet{emphasis}{SlateGrey}
+% \colorlet{body}{LightGrey}
+
+\begin{document}
+% Resume Header
+\name{Nicolas Deklen Crocker} 
+\tagline{}
 \personalinfo{
     \email{deklen.crocker@outlook.com}
     \phone{825 333 4907}
+    \location{Edmonton, AB}
+    \linkedin{NCrocker} %Confirm linkedin 
+    \github{NDCrocker}
+    % \mailaddress{Unit 209, 8619 111 St. NW, Edmonton, AB, T6G 2W1} Current mailing address 
 }
 
-\makecvheader{}
+\makecvheader
 
-\columnratio{0.65}
+\columnratio{0.6}
 
 \begin{paracol}{2}
-    \cvsection{Experience}
-        \cvevent{}{}{}{}
+    \cvsection{Education}
+        \cvevent{Bachelor of Science in Electrical Engineering}{University of Alberta}{September 2019 -- Current}{Edmonton, AB}
+        \cvevent{Bachelor of Science in Electrical Engineering (Transfer)}{MacEwan University}{September 2018 -- April 2019}{Edmonton, AB}
+
+    \cvsection{Relevant Work Experience}
+        \cvevent{Project Assistant (Summer Internship)}{Government of the Northwest Territories}{May 2021 - August 2021}{Inuvik, NT}
+            \begin{itemize}
+                \item Assist Regional Project Manager in developing tools in visual basic to streamline sharing of information from the 
+                      project officers to the regional projects manager
+                \item Develop and update project budget and status spreadsheets from Project Budget Reports (PBRs), an Project Status 
+                      Reports (PSRs).
+                \item 
+            \end{itemize}
 
     \cvsection{Projects}
-        \cvevent{}{}{}{}
+        \cvevent{Classroom IoT Carbon Dioxide Sensor (Capstone)}{University of Alberta}{September 2021 -- April 2022}{Edmonton, AB}
+            \begin{itemize}
+                \item Project Description: % add overall project description
+                \item Contributions: % add major components that I contribute to the project
+            \end{itemize}
 
 
-    \cvsection{Education}
+\switchcolumn
 
-    
+    \cvsection{Skills}
+            \cvtag{Proficient with multiple office suites} \\
+            \cvtag{Class 5 GDL} 
+            \cvtag{}
+
+        \divider
+
+            \cvtag{Conflict Resolution} 
+            \cvtag{Team Work Proficient}\\
+            \cvtag{Highly Motivated}
+            \cvtag{Organized}
+            \cvtag{Consistent}\\
+            \cvtag{Dependable}
+
+    \cvsection{Languages}
+        \cvskill{C/C++}{3}
+        \cvskill{Dart}{4}
+        \cvskill{SQL}{2}
+        \cvskill{VBA}{3}
+
+        \divider
+
+        \cvskill{English}{5}
+        \cvskill{French}{3}
+        
 \end{paracol}
 
 \end{document}
