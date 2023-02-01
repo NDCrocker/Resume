@@ -1,0 +1,322 @@
+%-------------------------------------
+% LaTeX Resume for Software Engineers
+% Author : Leslie Cheng
+% License : MIT
+%-------------------------------------
+
+\documentclass[letterpaper,12pt]{article}[leftmargin=*]
+
+\usepackage[empty]{fullpage}
+\usepackage{enumitem}
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \usepackage[xetex]{hyperref}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[pdftex]{hyperref}
+\fi
+\usepackage{fontawesome}
+\usepackage[sfdefault,light]{FiraSans}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+%-------------------------------------------------- SETTINGS HERE --------------------------------------------------
+% Header settings
+\def \fullname {Nicolas Deklen Crocker}
+\def \subtitle {Electrical Engineeer (E.I.T)}
+
+\def \linkedinicon {\faLinkedin}
+\def \linkedinlink {https://linkedin.com/in/ndcrocker/}
+\def \linkedintext {/ndcrocker}
+
+\def \phoneicon {\faPhone}
+\def \phonetext {+1 (825) 333-4907}
+
+\def \emailicon {\faEnvelope}
+\def \emaillink {mailto:deklen.crocker@outlook.com}
+\def \emailtext {deklen.crocker@outlook.com}
+
+\def \githubicon {\faGithub}
+\def \githublink {https://https://github.com/NDCrocker}
+\def \githubtext {/NDCrocker}
+
+\def \websiteicon {\faGlobe}
+\def \websitelink {https://google.com/}
+\def \websitetext {dwightschrute.com}
+
+\def \headertype {\singlecol} % \singlecol or \doublecol
+
+% Misc settings
+\def \entryspacing {-0pt}
+
+\def \bulletstyle {\faAngleRight}
+
+% Define colours
+\definecolor{primary}{HTML}{000000}
+\definecolor{secondary}{HTML}{000000}
+\definecolor{accent}{HTML}{263238}
+\definecolor{links}{HTML}{1565C0}
+
+%------------------------------------------------------------------------------------------------------------------- 
+
+% Defines to make listing easier
+\def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
+\def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
+\def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
+\def \github {\githubicon \hspace{3pt}\href{\githublink}{\githubtext}}
+\def \website {\websiteicon \hspace{3pt}\href{\websitelink}{\websitetext}}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.1in}
+
+% Define the link colours
+\hypersetup{
+    colorlinks=true,
+    urlcolor=links,
+}
+
+% Set the margin alignment 
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-------------------------
+% Custom commands
+
+% Sections
+\renewcommand{\section}[2]{\vspace{5pt}
+  \colorbox{secondary}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{7pt}#2}}}
+}
+
+% Entry start and end, for spacing
+\newcommand{\resumeEntryStart}{\begin{itemize}[leftmargin=2.5mm]}
+\newcommand{\resumeEntryEnd}{\end{itemize}\vspace{\entryspacing}}
+
+% Itemized list for the bullet points under an entry, if necessary
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=4.5mm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% Resume item
+\renewcommand{\labelitemii}{\bulletstyle}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Entry with title, subheading, date(s), and location
+\newcommand{\resumeEntryTSDL}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
+      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+      \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
+    \end{tabularx}\vspace{-6pt}
+}
+
+% Entry with title and date(s)
+\newcommand{\resumeEntryTD}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
+      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+    \end{tabularx}\vspace{-6pt}
+}
+
+% Entry for special (skills)
+\newcommand{\resumeEntryS}[2]{
+  \item[]\small{
+    \textbf{\color{primary}#1 }{ #2 \vspace{-6pt}}
+  }
+}
+
+% Double column header
+\newcommand{\doublecol}[6]{
+  \begin{tabularx}{\textwidth}{Xr}
+    {
+      \begin{tabular}[c]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}} % You could add a subtitle here
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l@{\hspace{1.5em}}l}
+        {\small#4} & {\small#1} \\
+        {\small#5} & {\small#2} \\
+        {\small#6} & {\small#3}
+      \end{tabular}
+    }
+  \end{tabularx}
+}
+
+% Single column header
+\newcommand{\singlecol}[6]{
+  \begin{tabularx}{\textwidth}{Xr}
+    {
+      \begin{tabular}[b]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}} % You could add a subtitle here
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l}
+        {\small#1} \\
+        {\small#2} \\
+        {\small#3} \\
+        {\small#4} \\
+        {\small#5} \\
+        {\small#6}
+      \end{tabular}
+    }
+  \end{tabularx}
+}
+
+\begin{document}
+%-------------------------------------------------- BEGIN HERE --------------------------------------------------
+
+%---------------------------------------------------- HEADER ----------------------------------------------------
+
+\headertype{\phone}{\email}{\linkedin}{\github}{}{} % Set the order of items here
+\vspace{-25pt} % Set a negative value to push the body up, and the opposite
+
+%-------------------------------------------------- EXPERIENCE --------------------------------------------------
+\section{\faPieChart}{Experience}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Jones Microwave Inc.}{Aug. 2022 -- Present}
+      {Embedded System Developer}{Edmonton, AB}
+    \resumeItemListStart
+      \resumeItem {Develop a comprehensive market survey of dozens of multiple laser diode drivers for viability in custom PCB design}
+      \resumeItem {Research further background theory in the physical attributes of VCSELs and laser diodes for their successful
+      implementation for application specific PCB}
+      \resumeItem {\textbf{Technologies:} Qucs Studio, Laser Diodes, VCSELs, Laser Drivers}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {University of Alberta}{Jan. 2023 -- Present}
+      {Head Lifeguard}{Edmonton, AB}
+    \resumeItemListStart
+      \resumeItem {Lead and direct other Lifeguards to provide a safe and comfortable environment for all patrons}
+      \resumeItem {Support fellow lifeguards during medical emergencies and patron incidents}
+      \resumeItem {Provide support in the training, mentoring and organization of lifeguards}
+      \resumeItem{Oversee aquatics facility in the absence of full-time and management staff}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+    {University of Alberta}{Jun. 2022 -- Dec. 2022}
+    {Lifeguard}{Edmonton, AB}
+    \resumeItemListStart
+        \resumeItem {Work with other Lifeguards to provide a safe and comfortable environment for all patrons}
+        \resumeItem {Support fellow lifeguards during medical emergencies and patron incidents}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Government of the Northwest Territories}{Apr. 2019 -- Aug. 2021}
+      {Project Assistant (Summer Internship)}{Inuvik, NT}
+    \resumeItemListStart
+      \resumeItem {Build and upgrade Visual Basic for Applications tools in Excel and Access for Project Manager to receive the latest
+      project information from all project officers across our office's duristiction}
+      \resumeItem {Manage and maintain project budget and status information for over 100 ongoing and upcoming projects in the Beaufort 
+      and Sahtu regions}
+      \resumeItem {Complete audits of multi-year and multi-contractor projects to assist project officers in settling disputes with contractors}
+      \resumeItem{\textbf{Technologies:} Microsoft Access, Microsoft Excel, SQL, VBA}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+  \resumeEntryTSDL
+    {Government of the Northwest Territories}{May 2020 -- Aug. 2020}
+    {COVID-19 Public Health Officer}{Inuvik, NT}
+  \resumeItemListStart
+    \resumeItem {Protect the community of Inuvik from exposure to COVID-19 by processing individuals arriving from multiple different
+    flights into the community}
+    \resumeItem {Direct and communicate required information to visitors ensuring correct isolation procedures and protocols are 
+    being followed}
+  \resumeItemListEnd
+\resumeEntryEnd
+
+\resumeEntryStart
+\resumeEntryTSDL
+  {Town of Inuvik}{Jul. 2018 -- Aug. 2018}
+  {Day Camp Senior Counsellor}{Inuvik, NT}
+\resumeItemListStart
+  \resumeItem {Manage and schedule junior counsellors to provide a safe, engaging and fun day camp for kids}
+  \resumeItem {Use Microsoft Office programs to provide in-depth reports about budget and attendance for the Inuvik Summer Day Camp}
+  \resumeItem {\textbf{Technologies:} Microsoft Word, Microsoft Excel}
+\resumeItemListEnd
+\resumeEntryEnd
+
+\resumeEntryStart
+\resumeEntryTSDL
+  {East Three Secondary School}{Mar. 2018 -- Jun. 2018}
+  {Support Assistant}{Inuvik, NT}
+\resumeItemListStart
+  \resumeItem {Produce a safe and productive work environment for all students with the help of other Support Assistants, staff and Teachers}
+  \resumeItem {Support teachers and other staff members with any issues or extra tasks that need to be completed to prepare for the
+  following class}
+  \resumeItem {Provide additional lessons and tutoring for students in academic stream math and science courses (Chemistry 20 \& 30, Math 10-1, Math 20-1 \& 30-1, Physics 20 \& 30)}
+\resumeItemListEnd
+\resumeEntryEnd
+
+%-------------------------------------------------- EDUCATION --------------------------------------------------
+\section{\faGraduationCap}{Education}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {University of Alberta}{Sep. 2018 -- Nov. 2022}
+      {Bachelor of Science in Electrical Engineering}{Edmonton, AB}
+  \resumeItemListStart
+    \resumeItem{MacEwan First-Year Engineering Transfer Program - 2018/19}
+    \resumeItem{Relevant Coursework: Digital Logic Design, Control Systems, Digital Electronics, Embedded System Design, Integrated Circuit Design, Intelligent Systems Engineering}
+  \resumeItemListEnd
+  \resumeEntryEnd
+
+%-------------------------------------------------- PROJECTS --------------------------------------------------
+\section{\faFlask}{Projects}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {University of Alberta}{Sep. 2021 -- Apr. 2022}
+      {Classroom IoT Carbon Dioxide Sensor (Capstone)}{Edmonton, AB}
+    \resumeItemListStart
+      \resumeItem {Design a battery recharging circuit using Lithium-Polymer and NiMH battery chemistries for portable device}
+      \resumeItem {Develop a smartphone application to interface with sensor to provide a more fluid and controlled user interface}
+      \resumeItem {Coordinate regular meetings between the group, the client, and technical advisors through all project stages}
+      \resumeItem {\textbf{Technologies:} BlueTooth Low Energy (BLE), Dart, Flutter, KiCAD}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+%-------------------------------------------------- PROGRAMMING SKILLS --------------------------------------------------
+\section{\faGears}{Skills}
+
+ \resumeEntryStart
+  \resumeEntryS{Languages } {C, C++, Dart, LaTeX, MATLAB, Python, SQL, VBA, VHDL}
+  \resumeEntryS{Tools } {Cadence Virtuoso, Git, KiCAD, Logic Analyzers, LTSpice, Qucs Studio}
+ \resumeEntryEnd
+
+%-------------------------------------------------- EXTRACURRICULARS --------------------------------------------------
+\section{}{Interests}
+
+ \resumeEntryStart
+  \resumeEntryS{Professional }{Integrated Circuit Design, Embedded System Design, PCB Design, Project Management, Firmware Development}
+  \resumeEntryS{Personal }{Powerlifting, Music, Linguistics, Running, Photography, Reading, Curling, PC Building, Gaming}
+ \resumeEntryEnd
+%-------------------------------------------------- REFERENCES --------------------------------------------------
+\section{\faEnvelope}{References}
+
+ \resumeEntryStart
+  \resumeEntryS{}{Available Upon Request}
+ \resumeEntryEnd
+
+
+\end{document}
