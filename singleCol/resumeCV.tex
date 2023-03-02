@@ -48,6 +48,10 @@
 \def \websitelink {https://google.com/}
 \def \websitetext {dwightschrute.com}
 
+\def \addyicon {\faHome}
+\def \addylink {https://goo.gl/maps/KHCJbwCxgCt38gPK7} % Update when I move
+\def \addytext {10655 83 Ave NW, Edmonton, AB}
+
 \def \headertype {\singlecol} % \singlecol or \doublecol
 
 % Misc settings
@@ -57,7 +61,7 @@
 
 % Define colours
 \definecolor{primary}{HTML}{000000}
-\definecolor{secondary}{HTML}{000000}
+\definecolor{secondary}{HTML}{0D47A1}
 \definecolor{accent}{HTML}{263238}
 \definecolor{links}{HTML}{1565C0}
 
@@ -69,6 +73,7 @@
 \def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
 \def \github {\githubicon \hspace{3pt}\href{\githublink}{\githubtext}}
 \def \website {\websiteicon \hspace{3pt}\href{\websitelink}{\websitetext}}
+\def \addy {\addyicon \hspace{3pt}\href{\addylink}{\addytext}}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.55in}
@@ -175,12 +180,26 @@
   \end{tabularx}
 }
 
+% \newcommand{\interests}[14]{
+%   \begin{tabular}[c]{l{\hspace{1.5em}}l}
+%     {\textbf{Professional}} & {\textbf{Personal}} \\
+%     {\small#1} & {\small#2} \\
+%     {\small#3} & {\small#4} \\
+%     {\small#5} & {\small#6} \\ 
+%     {\small#7} & {\small#8} \\ 
+%     {\small#9} & {\small#10} \\ 
+%     {}         & {\small#11} \\ 
+%     {}         & {\small#12} \\
+%     {}         & {\small#13} \\
+%     {}         & {\small#14} \\
+% }
+
 \begin{document}
 %-------------------------------------------------- BEGIN HERE --------------------------------------------------
 
 %---------------------------------------------------- HEADER ----------------------------------------------------
 
-\headertype{\phone}{\email}{\linkedin}{\github}{}{} % Set the order of items here
+\headertype{\phone}{\email}{\addy}{\linkedin}{\github}{} % Set the order of items here
 \vspace{-25pt} % Set a negative value to push the body up, and the opposite
 
 %-------------------------------------------------- EXPERIENCE --------------------------------------------------
@@ -192,9 +211,10 @@
       {Embedded System Developer}{Edmonton, AB}
     \resumeItemListStart
       \resumeItem {Develop a comprehensive market survey of several laser diode drivers for viability in custom PCB design}
-      \resumeItem {Research further background theory in the physical attributes of VCSELs and laser diodes for their successful
-      implementation for application specific PCB}
-      \resumeItem {\textbf{Technologies:} Qucs Studio, Laser Diodes, VCSELs, Laser Drivers}
+      % \resumeItem {Research background theory in physical attributes of VCSELs and laser diodes for their successful implementation for application specific PCB}
+      \resumeItem {Compare physical attributes of VCSELs and laser diodes for most appropriate device selection in project}
+      \resumeItem {Contact component suppliers and producers for further inquiries into their products}
+      \resumeItem {\textbf{Technologies:} Qucs Studio, Laser Diodes, LED Drivers, VCSELs}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -203,8 +223,8 @@
   {University of Alberta}{Jun. 2022 -- Present}
   {Lifeguard}{Edmonton, AB}
       \resumeItemListStart
-      \resumeItem {Respond to and support fellow lifeguards during medical emergencies and patron incidents}
-      \resumeItem {Lead other lifeguards to provide a safe and comfortable environment for all patrons}
+      % \resumeItem {Respond to and support fellow lifeguards during medical emergencies and patron incidents}
+      % \resumeItem {Lead other lifeguards to provide a safe and comfortable environment for all patrons}
       \resumeItem {Provide support in the training, mentoring and organization of lifeguards}
       \resumeItem {Oversee aquatics facility in the absence of full-time and management staff}
       \resumeItem {\textbf{Certifications:} Standard First Aid CPR C \& AED, National Lifeguard - Pool}
@@ -228,10 +248,10 @@
     \resumeItemListStart
       \resumeItem {Build and upgrade VBA tools in Excel and Access for Project Manager to receive the latest
       project information from all project officers across our office's jurisdiction}
-      \resumeItem {Manage and maintain project budget and status information for over 100 ongoing and upcoming projects in the Beaufort 
-      and Sahtu regions}
-      \resumeItem {Complete audits of multi-year and multi-contractor projects to assist project officers in settling disputes with contractors}
-      \resumeItem{\textbf{Technologies:} Microsoft Access, Microsoft Excel, SQL, Visual Basic for Applications (VBA)}
+      \resumeItem {Maintain project budget and status data for over 100 projects in the Beaufort and Sahtu regions}
+      \resumeItem {Complete audits of multi-year and multi-contractor projects to assist in settling contract disputes}
+      \resumeItem {Compile project drawing database for 1100+ engineering drawings and schematics from the region}
+      \resumeItem {\textbf{Technologies:} Microsoft Access, Microsoft Excel, SQL, Visual Basic for Applications (VBA)}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -240,10 +260,8 @@
     {Government of the Northwest Territories}{May 2020 -- Aug. 2020}
     {COVID-19 Public Health Officer}{Inuvik, NT}
   \resumeItemListStart
-    \resumeItem {Protect the community of Inuvik from exposure to COVID-19 by processing individuals arriving from multiple different
-    flights into the community}
-    \resumeItem {Direct and communicate required information to visitors ensuring correct isolation procedures and protocols are 
-    being followed}
+    \resumeItem {Reduce the spread of COVID-19 by processing individuals arriving from multiple flights into the community}
+    \resumeItem {Communicate required information to ensure correct isolation procedures and protocols are followed}
   \resumeItemListEnd
 \resumeEntryEnd
 
@@ -278,9 +296,18 @@
       {Bachelor of Science in Electrical Engineering}{Sep. 2018 -- Nov. 2022}
       {University of Alberta}{Edmonton, AB}
   \resumeItemListStart
-    \resumeItem{MacEwan First-Year Engineering Transfer Program - 2018/19}
-    \resumeItem{Relevant Coursework: Digital Logic Design, Control Systems, Digital Electronics, Embedded System Design, Integrated Circuit Design, Intelligent Systems Engineering, Power Engineering}
+    % \resumeItem{MacEwan First-Year Engineering Transfer Program - 2018/19}
+    \resumeItem{Relevant Coursework: Control Systems, Data Communication Networks, Digital Logic Design, Digital Electronics, Embedded System Design, Integrated Circuit Design, Intelligent Systems Engineering, Power Engineering}
   \resumeItemListEnd
+  \resumeEntryEnd
+
+%-------------------------------------------------- PROGRAMMING SKILLS --------------------------------------------------
+\section{\faGears}{Skills}
+
+  \resumeEntryStart
+   \resumeEntryS{Programming Languages } {C, C++, Dart, LaTeX, MATLAB, Python, SQL, VBA, VHDL}
+   \resumeEntryS{Engineering Design Tools } {Cadence Virtuoso, KiCAD, Logic Analyzers, LTSpice, Qucs Studio}
+   \resumeEntryS{Organizational Software } {Git, Google Drive Suite, MS Office Suite (Word, Excel, Powerpoint, Access)}
   \resumeEntryEnd
 
 %-------------------------------------------------- PROJECTS --------------------------------------------------
@@ -292,9 +319,10 @@
       {University of Alberta}{Edmonton, AB}
     \resumeItemListStart
       \resumeItem {Design a battery recharging circuit using Lithium-Polymer and NiMH battery chemistries for portable device}
-      \resumeItem {Develop a smartphone application to interface with sensor to provide a more fluid and controlled user interface}
+      \resumeItem {Develop a smartphone application to interface with sensor to provide a more fluid and controlled UI}
+      \resumeItem {Frame a Bluetooth GATT Profile to exchange credential data between smartphone application and device}
       \resumeItem {Coordinate regular meetings between the group, the client, and technical advisors through all project stages}
-      \resumeItem {\textbf{Technologies:} Bluetooth Low Energy (BLE), Dart, Flutter, KiCAD}
+      \resumeItem {\textbf{Technologies:} Bluetooth Low Energy (BLE), C++, Dart, Flutter, KiCAD, SoC}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -314,23 +342,31 @@
  \resumeEntryTD{AlbertaLoop}{Jun. 2022 -- Present}
  \resumeItemListStart
       \resumeItem {Create Python script to parse data from navigation module test to diagnose issues within the GPS module's equirectangular projection process}
-      \resumeItem {\textbf{Technologies:} C++, Python}
+      \resumeItem {\textbf{Technologies:} Python}
     \resumeItemListEnd
- \resumeEntryEnd
-%-------------------------------------------------- PROGRAMMING SKILLS --------------------------------------------------
-\section{\faGears}{Skills}
-
- \resumeEntryStart
-  \resumeEntryS{Languages } {C, C++, Dart, LaTeX, MATLAB, Python, SQL, VBA, VHDL}
-  \resumeEntryS{Tools } {Cadence Virtuoso, Git, KiCAD, Logic Analyzers, LTSpice, Qucs Studio}
  \resumeEntryEnd
 
 %-------------------------------------------------- Interests --------------------------------------------------
 \section{\faGamepad}{Interests}
 
  \resumeEntryStart
-  \resumeEntryS{Professional }{Integrated Circuit Design, Embedded System Design, PCB Design, Project Management, Firmware Development}
-  \resumeEntryS{Personal }{Powerlifting, Music, Linguistics, Running, Photography, Reading, Curling, PC Building, Gaming}
+  \resumeEntryTD{Professional}{}%Integrated Circuit Design, Embedded System Design, PCB Design, Project Management, Firmware Development}
+   \resumeItemListStart
+    % \resumeItem{Integrated Circuit Design: }
+    \resumeItem{Embedded System Design: Power Management, Processor, Application-Specific Circuits}
+    \resumeItem{Firmware Development: High-level Firmware, Subsystem}
+    \resumeItem{Integrated Circuit Design: Architectural Design, Logic/Circuit Design, Design Verification}
+    \resumeItem{Project Management: Scope Management, Schedule Management, Cost Management, Risk Management}
+   \resumeItemListEnd
+
+  \resumeEntryTD{Personal}{}%Powerlifting, Music, Linguistics, Running, Photography, Reading, Curling, PC Building, Gaming}
+   \resumeItemListStart
+    \resumeItem{Curling: Curled competitvely for 10 years; multiple time NWT representative between Nationals and CWGs}
+    \resumeItem{Learning Languages: DELF-certified fluency in French; interested in learning German and Cantonese}
+    \resumeItem{Powerlifting: Avid powerlifting competitor; currently gearing up for Provincials in June}
+    % \resumeItem{Reading: Learning to enjoy reading more often. Current interests: Neurology, Psychology, Electrical Engineering}
+    \resumeItem{Running: High school X-country and track \& field athlete}
+   \resumeItemListEnd
  \resumeEntryEnd
 %-------------------------------------------------- REFERENCES --------------------------------------------------
 \section{\faEnvelope}{References}
