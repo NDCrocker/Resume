@@ -101,6 +101,7 @@
   \colorbox{secondary}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{7pt}#2}}}
 }
 
+
 % Entry start and end, for spacing
 \newcommand{\resumeEntryStart}{\begin{itemize}[leftmargin=2.5mm]}
 \newcommand{\resumeEntryEnd}{\end{itemize}\vspace{\entryspacing}}
@@ -110,6 +111,7 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 % Resume item
+\renewcommand{\labelitemi}{\bulletstyle}
 \renewcommand{\labelitemii}{\bulletstyle}
 \newcommand{\resumeItem}[1]{
   \item\small{
@@ -133,6 +135,7 @@
       \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
     \end{tabularx}\vspace{-6pt}
 }
+
 
 % Entry for special (skills)
 \newcommand{\resumeEntryS}[2]{
@@ -200,7 +203,34 @@
 %---------------------------------------------------- HEADER ----------------------------------------------------
 
 \headertype{\phone}{\email}{\addy}{\linkedin}{\github}{} % Set the order of items here
-\vspace{-25pt} % Set a negative value to push the body up, and the opposite
+\vspace{-20pt} % Set a negative value to push the body up, and the opposite
+
+%---------------------------------------------------- Highlights ----------------------------------------------------
+\section{}{Highlights}
+  \resumeItemListStart
+    \resumeItem{Gotcha BITCH!}
+  \resumeItemListEnd
+%---------------------------------------------------- EDUCATION --------------------------------------------------
+\section{\faGraduationCap}{Education}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Bachelor of Science in Electrical Engineering}{Sep. 2018 -- Nov. 2022}
+      {University of Alberta}{Edmonton, AB}
+  \resumeItemListStart
+    % \resumeItem{MacEwan First-Year Engineering Transfer Program - 2018/19}
+    \resumeItem{Relevant Coursework: Control Systems, Data Communication Networks, Digital Logic Design, Digital Electronics, Embedded System Design, Integrated Circuit Design, Intelligent Systems Engineering, Power Engineering}
+  \resumeItemListEnd
+  \resumeEntryEnd
+
+%-------------------------------------------------- PROGRAMMING SKILLS --------------------------------------------------
+\section{\faGears}{Skills}
+
+  \resumeEntryStart
+   \resumeEntryS{Programming Languages } {C, C++, Dart, LaTeX, MATLAB, Python, SQL, VBA, VHDL}
+   \resumeEntryS{Engineering Design Tools } {Cadence Virtuoso, KiCAD, Logic Analyzers, LTSpice, Qucs Studio}
+   \resumeEntryS{Organizational Software } {Git, Google Drive Suite, MS Office Suite (Word, Excel, Powerpoint, Access)}
+  \resumeEntryEnd
 
 %-------------------------------------------------- EXPERIENCE --------------------------------------------------
 \section{\faPieChart}{Experience}
@@ -215,19 +245,6 @@
       \resumeItem {Compare physical attributes of VCSELs and laser diodes for most appropriate device selection in project}
       \resumeItem {Contact component suppliers and producers for further inquiries into their products}
       \resumeItem {\textbf{Technologies:} Qucs Studio, Laser Diodes, LED Drivers, VCSELs}
-    \resumeItemListEnd
-  \resumeEntryEnd
-
-  \resumeEntryStart
-  \resumeEntryTSDL
-  {University of Alberta}{Jun. 2022 -- Present}
-  {Lifeguard}{Edmonton, AB}
-      \resumeItemListStart
-      % \resumeItem {Respond to and support fellow lifeguards during medical emergencies and patron incidents}
-      % \resumeItem {Lead other lifeguards to provide a safe and comfortable environment for all patrons}
-      \resumeItem {Provide support in the training, mentoring and organization of lifeguards}
-      \resumeItem {Oversee aquatics facility in the absence of full-time and management staff}
-      \resumeItem {\textbf{Certifications:} Standard First Aid CPR C \& AED, National Lifeguard - Pool}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -288,34 +305,13 @@
 % \resumeItemListEnd
 % \resumeEntryEnd
 
-%-------------------------------------------------- EDUCATION --------------------------------------------------
-\section{\faGraduationCap}{Education}
-
-  \resumeEntryStart
-    \resumeEntryTSDL
-      {Bachelor of Science in Electrical Engineering}{Sep. 2018 -- Nov. 2022}
-      {University of Alberta}{Edmonton, AB}
-  \resumeItemListStart
-    % \resumeItem{MacEwan First-Year Engineering Transfer Program - 2018/19}
-    \resumeItem{Relevant Coursework: Control Systems, Data Communication Networks, Digital Logic Design, Digital Electronics, Embedded System Design, Integrated Circuit Design, Intelligent Systems Engineering, Power Engineering}
-  \resumeItemListEnd
-  \resumeEntryEnd
-
-%-------------------------------------------------- PROGRAMMING SKILLS --------------------------------------------------
-\section{\faGears}{Skills}
-
-  \resumeEntryStart
-   \resumeEntryS{Programming Languages } {C, C++, Dart, LaTeX, MATLAB, Python, SQL, VBA, VHDL}
-   \resumeEntryS{Engineering Design Tools } {Cadence Virtuoso, KiCAD, Logic Analyzers, LTSpice, Qucs Studio}
-   \resumeEntryS{Organizational Software } {Git, Google Drive Suite, MS Office Suite (Word, Excel, Powerpoint, Access)}
-  \resumeEntryEnd
 
 %-------------------------------------------------- PROJECTS --------------------------------------------------
 \section{\faFlask}{Projects}
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {\href{https://github.com/EE-Team10-Capstone}{\color{black}Classroom IoT Carbon Dioxide Sensor (Capstone)}}{Sep. 2021 -- Apr. 2022}
+      {\href{https://github.com/EE-Team10-Capstone}{\color{black}Classroom IoT Carbon Dioxide Sensor (Capstone) \faGithub}}{Sep. 2021 -- Apr. 2022}
       {University of Alberta}{Edmonton, AB}
     \resumeItemListStart
       \resumeItem {Design a battery recharging circuit using Lithium-Polymer and NiMH battery chemistries for portable device}
@@ -346,34 +342,47 @@
     \resumeItemListEnd
  \resumeEntryEnd
 
+ \resumeEntryStart
+ \resumeEntryTSDL
+ {University of Alberta}{Jun. 2022 -- Present}
+ {Lifeguard}{Edmonton, AB}
+     \resumeItemListStart
+     % \resumeItem {Respond to and support fellow lifeguards during medical emergencies and patron incidents}
+     % \resumeItem {Lead other lifeguards to provide a safe and comfortable environment for all patrons}
+     \resumeItem {Provide support in the training, mentoring and organization of lifeguards}
+     \resumeItem {Oversee aquatics facility in the absence of full-time and management staff}
+     \resumeItem {\textbf{Certifications:} Standard First Aid CPR C \& AED, National Lifeguard - Pool}
+   \resumeItemListEnd
+ \resumeEntryEnd
+
 %-------------------------------------------------- Interests --------------------------------------------------
-\section{\faGamepad}{Interests}
+% \section{\faGamepad}{Interests}
 
- \resumeEntryStart
-  \resumeEntryTD{Professional}{}%Integrated Circuit Design, Embedded System Design, PCB Design, Project Management, Firmware Development}
-   \resumeItemListStart
-    % \resumeItem{Integrated Circuit Design: }
-    \resumeItem{Embedded System Design: Power Management, Processor, Application-Specific Circuits}
-    \resumeItem{Firmware Development: High-level Firmware, Subsystem}
-    \resumeItem{Integrated Circuit Design: Architectural Design, Logic/Circuit Design, Design Verification}
-    \resumeItem{Project Management: Scope Management, Schedule Management, Cost Management, Risk Management}
-   \resumeItemListEnd
+%  \resumeEntryStart
+%   \resumeEntryTD{Professional}{}%Integrated Circuit Design, Embedded System Design, PCB Design, Project Management, Firmware Development}
+%    \resumeItemListStart
+%     % \resumeItem{Integrated Circuit Design: }
+%     \resumeItem{Embedded System Design: Power Management, Processor, Application-Specific Circuits}
+%     \resumeItem{Firmware Development: High-level Firmware, Subsystem}
+%     \resumeItem{Integrated Circuit Design: Architectural Design, Logic/Circuit Design, Design Verification}
+%     \resumeItem{Project Management: Scope Management, Schedule Management, Cost Management, Risk Management}
+%    \resumeItemListEnd
 
-  \resumeEntryTD{Personal}{}%Powerlifting, Music, Linguistics, Running, Photography, Reading, Curling, PC Building, Gaming}
-   \resumeItemListStart
-    \resumeItem{Curling: Curled competitvely for 10 years; multiple time NWT representative between Nationals and CWGs}
-    \resumeItem{Learning Languages: DELF-certified fluency in French; interested in learning German and Cantonese}
-    \resumeItem{Powerlifting: Avid powerlifting competitor; currently gearing up for Provincials in June}
-    % \resumeItem{Reading: Learning to enjoy reading more often. Current interests: Neurology, Psychology, Electrical Engineering}
-    \resumeItem{Running: High school X-country and track \& field athlete}
-   \resumeItemListEnd
- \resumeEntryEnd
+%   \resumeEntryTD{Personal}{}%Powerlifting, Music, Linguistics, Running, Photography, Reading, Curling, PC Building, Gaming}
+%    \resumeItemListStart
+%     \resumeItem{Curling: Curled competitvely for 10 years; multiple time NWT representative between Nationals and CWGs}
+%     \resumeItem{Learning Languages: DELF-certified fluency in French; interested in learning German and Cantonese}
+%     \resumeItem{Powerlifting: Avid powerlifting competitor; currently gearing up for Provincials in June}
+%     % \resumeItem{Reading: Learning to enjoy reading more often. Current interests: Neurology, Psychology, Electrical Engineering}
+%     \resumeItem{Running: High school X-country and track \& field athlete}
+%    \resumeItemListEnd
+%  \resumeEntryEnd
 %-------------------------------------------------- REFERENCES --------------------------------------------------
-\section{\faEnvelope}{References}
+% \section{\faEnvelope}{References}
 
- \resumeEntryStart
-  \resumeEntryS{}{Available Upon Request}
- \resumeEntryEnd
+%  \resumeEntryStart
+%   \resumeEntryS{}{Available Upon Request}
+%  \resumeEntryEnd
 
 
 \end{document}
