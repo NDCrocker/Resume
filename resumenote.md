@@ -14,7 +14,8 @@
 - [ ] Remove irrelevant and weak experience (remove ABLoop)
 - [ ] Elaborate on certain sections (UAPA, Interests)
 - [ ] Update the template 
-- [ ] Add more information to the self learning 
+- [ ] Add more information to the self learning
+- [ ] Merge clean up all the branches  
 
 
 ### Progress 
@@ -25,3 +26,4 @@
 - Found a few interesting templates that are very simple. 
 - Next step: Clear more information out
   - Maybe look into structure to include the courses I have completed
+- 
