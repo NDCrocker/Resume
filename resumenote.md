@@ -12,4 +12,16 @@
 ### To-do
 - [ ] Update section on Jones Microwave with the latest info
 - [ ] Remove irrelevant and weak experience (remove ABLoop)
-- [ ] Elaborate on certain sections (UAPA, Interests, )
+- [ ] Elaborate on certain sections (UAPA, Interests)
+- [ ] Update the template 
+- [ ] Add more information to the self learning 
+
+
+### Progress 
+#### April 13/2023 
+- Commented a ton of information out from irrelevant experience 
+
+- Want to bring the resume to a single page. 
+- Found a few interesting templates that are very simple. 
+- Next step: Clear more information out
+  - Maybe look into structure to include the courses I have completed
