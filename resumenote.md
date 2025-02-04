@@ -10,7 +10,7 @@
 
 ## Notes
 ### To-do
-- [ ] Update section on Jones Microwave with the latest info
+- [ ] Update section on Jones Microwave with the latest info 
 - [ ] Remove irrelevant and weak experience (remove ABLoop)
 - [ ] Elaborate on certain sections (UAPA, Interests)
 - [ ] Update the template 
@@ -18,7 +18,7 @@
 - [ ] Merge clean up all the branches  
 
 
-### Progress 
+### Logs 
 #### April 13/2023 
 - Commented a ton of information out from irrelevant experience 
 
@@ -26,4 +26,18 @@
 - Found a few interesting templates that are very simple. 
 - Next step: Clear more information out
   - Maybe look into structure to include the courses I have completed
-- 
+
+#### November 20/2024
+- Reconfigured the work environment
+- Need to plan thoughts for updates
+
+JMi Experience 
+- Build PCB assembly environment for prototyping and testing
+- Adding tools/technologies:
+  - DC Power Supplies
+  - Optical Power Sensors 
+  - Ansys 3D Modelling Software
+  - Voltera V-One Circuit Printer
+  - PCB Mills - Training Next Week
+  - Intel FPGA Suite
+- Creating high-speed 
