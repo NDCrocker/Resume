@@ -41,3 +41,7 @@ JMi Experience
   - PCB Mills - Training Next Week
   - Intel FPGA Suite
 - Creating high-speed 
+
+#### July 2026 
+- Continued experience built at JMi
+  - 
